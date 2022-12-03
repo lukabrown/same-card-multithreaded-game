@@ -16,7 +16,6 @@ static void* Dealer(void*);
 static void* Player(void*);
 static void  PrintDeck();
 static void  PrintScreen();
-static float urand();
 static void  ShuffleDeck();
 
 static vector<int> deck;
@@ -95,16 +94,39 @@ static void PrintDeck() {
 }
 
 static void PrintScreen() {
+    char suit;
+    int temp;
+    string win;
     for (int i = 1; i < 5; i++) {
-        string win;
+        temp = hand[i]/13;
+        if (temp == 0)
+            suit = 'C';
+        else if (temp == 1)
+            suit = 'D';
+        else if (temp == 2)
+            suit = 'H';
+        else 
+            suit = 'S';
+
         if (i % 2 == prevWin % 2)
             win = "Winner\n";
         else 
             win = "Lost\n";
-        if (i == prevWin)
-        cout << "Player " << i << ": hand " << hand[i]%13 << ',' << draw[i]%13 << '\n';
+        if (i == prevWin) {
+        cout << "Player " << i << ": hand " << suit << hand[i]%13 << ',';
+        temp = draw[i]/13;
+        if (temp == 0)
+            suit = 'C';
+        else if (temp == 1)
+            suit = 'D';
+        else if (temp == 2)
+            suit = 'H';
+        else 
+            suit = 'S';
+        cout << suit << draw[i]%13 << '\n';
+        }
         else
-            cout << "Player " << i << ": hand " << hand[i]%13 << '\n';
+            cout << "Player " << i << ": hand " << suit << hand[i]%13 << '\n';
         cout << "Player " << i << ": " << win;
     }
     PrintDeck();
@@ -126,11 +148,8 @@ static void* Dealer(void* id) {
                 whos_turn = 2;
             roundGoing = true;
             MyFile << "\nDealer: shuffle\n";
-            pthread_mutex_unlock(&table);
         }
-        else {
-            pthread_mutex_unlock(&table);
-        }
+        pthread_mutex_unlock(&table);
     }
     return NULL;
 }
@@ -208,7 +227,7 @@ static void* Player(void* id) {
                     prevWin = my_id;
                     PrintScreen();
                 } else {
-                    int num = urand();
+                    int num = rand()%2;
                     if (num == 0) {
                         MyFile << "Player " << my_id << ": discard " << hand[my_id]%13 << '\n';
                         hand[my_id] = draw[my_id];
@@ -222,10 +241,6 @@ static void* Player(void* id) {
         pthread_mutex_unlock(&table);
     }
     return NULL;
-}
-
-static float urand() {
-	return( (float) rand()/RAND_MAX );
 }
 
 void ShuffleDeck() {
