@@ -1,7 +1,6 @@
 //Luka Brown Project 2
 
 #include <iostream>
-#include <random>
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
@@ -20,24 +19,28 @@ static void  ShuffleDeck();
 
 static vector<int> deck;
 static bool game = true;
-static int wins = 0;
-static int turns = 0;
-static int whos_turn = 0;
+static int  wins = 0;
+static int  turns = 0;
+static int  whos_turn = 0;
 static bool roundGoing = false;
-static int prevWin = -1;
-static int hand[] = { -1,-1,-1,-1,-1 };
-static int draw[] = { -1,-1,-1,-1,-1 };
+static int  prevWin = -1;
+static int  hand[] = { -1,-1,-1,-1,-1 };
+static int  draw[] = { -1,-1,-1,-1,-1 };
 static pthread_mutex_t table;
 static ofstream MyFile("output.txt");
 static bool alldone = false;
-static int seed;
+static int seed = 0;
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        fprintf(stderr, "USAGE: ./game.cpp [seed]");
+        fprintf(stderr, "\nUSAGE: ./game.cpp [seed]\n");
         exit(1);
     }
-    seed = atoi(argv[1]);
+    string temp = argv[1];
+    for (int i = 0; temp[i] != '\0'; i++) {
+        seed = seed * 10 + temp[i] - '0';
+    }
+    //cout << "Seed: " << seed << '\n';
     srand((unsigned int)seed);
 
     pthread_t* const handle = new pthread_t [5];
@@ -229,10 +232,10 @@ static void* Player(void* id) {
                 } else {
                     int num = rand()%2;
                     if (num == 0) {
-                        MyFile << "Player " << my_id << ": discard " << hand[my_id]%13 << '\n';
+                        MyFile << "Player " << my_id << ": discard " << hand[my_id]%13 << " at random\n";
                         hand[my_id] = draw[my_id];
                     } else
-                        MyFile << "Player " << my_id << ": discard " << draw[my_id]%13 << '\n';
+                        MyFile << "Player " << my_id << ": discard " << draw[my_id]%13 << " at random\n";
                     draw[my_id] = -1;
                 }
                 
