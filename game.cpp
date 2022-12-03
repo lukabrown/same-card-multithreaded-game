@@ -31,14 +31,14 @@ static int draw[] = { -1,-1,-1,-1,-1 };
 static pthread_mutex_t table;
 static ofstream MyFile("output.txt");
 static bool alldone = false;
+static int seed;
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "USAGE: ./game.cpp [seed]");
         exit(1);
     }
-    int seed = atoi(argv[1]);
-    //cout << "Running Seed: " << seed << "\n\n";
+    seed = atoi(argv[1]);
     srand((unsigned int)seed);
 
     pthread_t* const handle = new pthread_t [5];
@@ -113,6 +113,7 @@ static void PrintScreen() {
 
 static void* Dealer(void* id) {
     int my_id = *((int*)(&id));
+    srand((unsigned int)seed);
     while(game) {
         pthread_mutex_lock(&table);
         if (whos_turn == my_id) {
@@ -137,7 +138,7 @@ static void* Dealer(void* id) {
 static void* Player(void* id) {
     int my_id = *((int*)(&id));
     long partner;
-
+    srand((unsigned int)seed);
     if (my_id == 1)
         partner = 3;
     else if (my_id == 2) 
@@ -228,7 +229,6 @@ static float urand() {
 }
 
 void ShuffleDeck() {
-    //random_shuffle(deck.begin(), deck.end());
     int swap, random;
     for (int i = 0; i <= 52; i++) {
         random = rand() % 52;
