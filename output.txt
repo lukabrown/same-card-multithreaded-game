@@ -1,150 +1,110 @@
 
 Dealer: shuffle
-Player 1: draw C3
-Player 2: draw S3
-Player 3: draw H10
-Player 4: draw D7
-Player 1: hand C3
-Player 1: draw C13
-Player 1: hand (C3,C13) <> Player 3: hand H10
-Player 1: discard C3 at random
-Player 2: hand S3
-Player 2: draw D10
-Player 2: hand (S3,D10) <> Player 4: hand D7
-Player 2: discard S3 at random
-Player 3: hand H10
-Player 3: draw C2
-Player 3: hand (H10,C2) <> Player 1: hand C13
-Player 3: discard H10 at random
-Player 4: hand D7
-Player 4: draw S6
-Player 4: hand (D7,S6) <> Player 2: hand D10
-Player 4: discard D7 at random
-Player 1: hand C13
-Player 1: draw D4
-Player 1: hand (C13,D4) <> Player 3: hand C2
-Player 1: discard D4 at random
-Player 2: hand D10
-Player 2: draw H11
-Player 2: hand (D10,H11) <> Player 4: hand S6
-Player 2: discard H11 at random
-Player 3: hand C2
-Player 3: draw C5
-Player 3: hand (C2,C5) <> Player 1: hand C13
-Player 3: discard C5 at random
-Player 4: hand S6
-Player 4: draw H4
-Player 4: hand (S6,H4) <> Player 2: hand D10
-Player 4: discard H4 at random
-Player 1: hand C13
-Player 1: draw D1
-Player 1: hand (C13,D1) <> Player 3: hand C2
-Player 1: discard D1 at random
-Player 2: hand D10
-Player 2: draw D11
-Player 2: hand (D10,D11) <> Player 4: hand S6
-Player 2: discard D11 at random
-Player 3: hand C2
-Player 3: draw D6
-Player 3: hand (C2,D6) <> Player 1: hand C13
-Player 3: discard D6 at random
-Player 4: hand S6
-Player 4: draw S5
-Player 4: hand (S6,S5) <> Player 2: hand D10
-Player 4: discard S5 at random
-Player 1: hand C13
-Player 1: draw S12
-Player 1: hand (C13,S12) <> Player 3: hand C2
-Player 1: discard S12 at random
-Player 2: hand D10
-Player 2: draw C1
-Player 2: hand (D10,C1) <> Player 4: hand S6
-Player 2: discard C1 at random
-Player 3: hand C2
-Player 3: draw H9
-Player 3: hand (C2,H9) <> Player 1: hand C13
-Player 3: discard H9 at random
-Player 4: hand S6
-Player 4: draw C6
-Player 4: hand (S6,C6) <> Player 2: hand D10
-Player 4: discard C6 at random
-Player 1: hand C13
-Player 1: draw C7
-Player 1: hand (C13,C7) <> Player 3: hand C2
-Player 1: discard C13 at random
-Player 2: hand D10
-Player 2: draw H12
-Player 2: hand (D10,H12) <> Player 4: hand S6
-Player 2: discard D10 at random
-Player 3: hand C2
+Player 1: draw D10
+Player 2: draw H7
+Player 3: draw C8
+Player 4: draw S3
+Player 1: hand D10
+Player 1: draw S10
+Player 1: hand (D10,S10) <> Player 3: hand C8
+Player 1: discard S10 at random
+Player 2: hand H7
+Player 2: draw C6
+Player 2: hand (H7,C6) <> Player 4: hand S3
+Player 2: discard C6 at random
+Player 3: hand C8
 Player 3: draw S7
-Player 3: hand (C2,S7) <> Player 1: hand C7
-Player 3: Team 1 wins
-Player 3: exits round
+Player 3: hand (C8,S7) <> Player 1: hand D10
+Player 3: discard S7 at random
+Player 4: hand S3
+Player 4: draw C10
+Player 4: hand (S3,C10) <> Player 2: hand H7
+Player 4: discard C10 at random
+Player 1: hand D10
+Player 1: draw S11
+Player 1: hand (D10,S11) <> Player 3: hand C8
+Player 1: discard S11 at random
+Player 2: hand H7
+Player 2: draw H1
+Player 2: hand (H7,H1) <> Player 4: hand S3
+Player 2: discard H1 at random
+Player 3: hand C8
+Player 3: draw H5
+Player 3: hand (C8,H5) <> Player 1: hand D10
+Player 3: discard H5 at random
+Player 4: hand S3
+Player 4: draw C11
+Player 4: hand (S3,C11) <> Player 2: hand H7
+Player 4: discard C11 at random
+Player 1: hand D10
+Player 1: draw C2
+Player 1: hand (D10,C2) <> Player 3: hand C8
+Player 1: discard C2 at random
+Player 2: hand H7
+Player 2: draw C9
+Player 2: hand (H7,C9) <> Player 4: hand S3
+Player 2: discard C9 at random
+Player 3: hand C8
+Player 3: draw D9
+Player 3: hand (C8,D9) <> Player 1: hand D10
+Player 3: discard D9 at random
+Player 4: hand S3
+Player 4: draw H3
+Player 4: hand (S3,H3) <> Player 2: hand H7
+Player 4: discard H3 at random
+Player 1: hand D10
+Player 1: draw H12
+Player 1: hand (D10,H12) <> Player 3: hand C8
+Player 1: discard D10 at random
+Player 2: hand H7
+Player 2: draw H4
+Player 2: hand (H7,H4) <> Player 4: hand S3
+Player 2: discard H7 at random
+Player 3: hand C8
+Player 3: draw C3
+Player 3: hand (C8,C3) <> Player 1: hand H12
+Player 3: discard C8 at random
+Player 4: hand S3
+Player 4: draw H6
+Player 4: hand (S3,H6) <> Player 2: hand H4
+Player 4: discard S3 at random
+Player 1: hand H12
+Player 1: draw D4
+Player 1: hand (H12,D4) <> Player 3: hand C3
+Player 1: discard D4 at random
+Player 2: hand H4
+Player 2: draw C4
+Player 2: hand (H4,C4) <> Player 4: hand H6
+Player 2: discard C4 at random
+Player 3: hand C3
+Player 3: draw S2
+Player 3: hand (C3,S2) <> Player 1: hand H12
+Player 3: discard S2 at random
+Player 4: hand H6
+Player 4: draw C5
+Player 4: hand (H6,C5) <> Player 2: hand H4
+Player 4: discard C5 at random
+Player 1: hand H12
+Player 1: draw D3
+Player 1: hand (H12,D3) <> Player 3: hand C3
+Player 1: Team 1 wins
 Player 1: exits round
 Player 2: exits round
+Player 3: exits round
 Player 4: exits round
 
 Dealer: shuffle
-Player 2: draw D7
-Player 3: draw H8
-Player 4: draw C1
-Player 1: draw H5
-Player 2: hand D7
-Player 2: draw H11
-Player 2: hand (D7,H11) <> Player 4: hand C1
-Player 2: discard D7 at random
-Player 3: hand H8
-Player 3: draw D1
-Player 3: hand (H8,D1) <> Player 1: hand H5
-Player 3: discard H8 at random
-Player 4: hand C1
-Player 4: draw S1
-Player 4: hand (C1,S1) <> Player 2: hand H11
-Player 4: discard C1 at random
-Player 1: hand H5
-Player 1: draw D4
-Player 1: hand (H5,D4) <> Player 3: hand D1
-Player 1: discard H5 at random
-Player 2: hand H11
-Player 2: draw C4
-Player 2: hand (H11,C4) <> Player 4: hand S1
-Player 2: discard C4 at random
-Player 3: hand D1
-Player 3: draw D2
-Player 3: hand (D1,D2) <> Player 1: hand D4
-Player 3: discard D1 at random
-Player 4: hand S1
-Player 4: draw H10
-Player 4: hand (S1,H10) <> Player 2: hand H11
-Player 4: discard S1 at random
-Player 1: hand D4
-Player 1: draw C11
-Player 1: hand (D4,C11) <> Player 3: hand D2
-Player 1: discard C11 at random
-Player 2: hand H11
-Player 2: draw S8
-Player 2: hand (H11,S8) <> Player 4: hand H10
-Player 2: discard S8 at random
-Player 3: hand D2
-Player 3: draw D13
-Player 3: hand (D2,D13) <> Player 1: hand D4
-Player 3: discard D13 at random
-Player 4: hand H10
-Player 4: draw H1
-Player 4: hand (H10,H1) <> Player 2: hand H11
-Player 4: discard H1 at random
-Player 1: hand D4
-Player 1: draw C5
-Player 1: hand (D4,C5) <> Player 3: hand D2
-Player 1: discard C5 at random
-Player 2: hand H11
 Player 2: draw C13
-Player 2: hand (H11,C13) <> Player 4: hand H10
-Player 2: discard H11 at random
-Player 3: hand D2
-Player 3: draw H4
-Player 3: hand (D2,H4) <> Player 1: hand D4
+Player 3: draw C10
+Player 4: draw D2
+Player 1: draw S10
+Player 2: hand C13
+Player 2: draw C5
+Player 2: hand (C13,C5) <> Player 4: hand D2
+Player 2: discard C5 at random
+Player 3: hand C10
+Player 3: draw S1
+Player 3: hand (C10,S1) <> Player 1: hand S10
 Player 3: Team 1 wins
 Player 3: exits round
 Player 1: exits round
